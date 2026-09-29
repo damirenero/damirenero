@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Дамир Шакиров — управление, продажи, E-commerce</title>
-<meta name="description" content="14 лет опыта в FMCG и онлайн-продажах">
+<meta name="description" content="Дамир Шакиров: исполнительный директор, руководитель E-commerce направления. 14 лет опыта в FMCG и онлайн-продажах. Казань.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Caveat:wght@500&display=swap" rel="stylesheet">
@@ -46,6 +46,8 @@
   .facts { background:#fff; border-bottom:1px solid #e4e1d8; }
   .facts .wrap { display:flex; flex-wrap:wrap; gap:16px 48px; padding-top:18px; padding-bottom:18px; font-size:14px; }
   .facts b { display:block; }
+  .facts .f { display:flex; gap:12px; align-items:center; }
+  .ico { width:26px; height:26px; flex:none; }
   .facts span { color:var(--muted); }
 
   /* Карточки */
@@ -59,18 +61,24 @@
   .card p { font-size:14px; }
   .years { color:var(--muted); font-size:14px; margin:14px 0 6px; }
   .role { font-weight:800; }
-  .mountain { background:linear-gradient(180deg,#dfe8f3,#f2efe8 70%); }
-  .china { background:linear-gradient(180deg,#f8e9d6,#e8b98a); }
+  .top .card { min-height:400px; }
+  .mountain { background:url(img/mountains.svg) center/cover no-repeat,#e6edf5; }
+  .china { background:url(img/skyline.svg) center bottom/100% auto no-repeat,linear-gradient(180deg,#fcefdc,#f4cd9f); }
+  .co { display:flex; align-items:flex-end; gap:10px; margin:2px 0 8px; color:#1b7a3a; }
+  .co i { font-style:normal; font-weight:800; font-size:1.5rem; line-height:1.25; padding:0 8px; border:2px solid #1b7a3a; border-radius:3px; align-self:center; }
+  .co b { font-size:1.7rem; font-weight:800; line-height:1; }
+  .co em { font-style:normal; font-weight:500; font-size:1.05rem; line-height:1.1; }
   .cities { font-size:14px; margin-top:8px; }
 
-  .mid { grid-template-columns:repeat(4,1fr) 1.15fr; margin-top:14px; }
+  .mid { grid-template-columns:repeat(3,1fr) 1.15fr; margin-top:14px; }
   .brand { min-height:260px; display:flex; flex-direction:column; justify-content:flex-end; color:#fff; }
   .brand strong { font-size:1.5rem; font-weight:800; line-height:1.1; }
   .brand span { font-size:13px; opacity:.92; margin-top:8px; }
   .brand.pic { background:#fff; color:var(--ink); padding:0; justify-content:flex-start; }
-  .brand.pic .im { height:150px; background:#e9e9e9; }
+  .brand.pic .im { height:190px; background:#e9e9e9; }
   .brand.pic .im img { display:block; width:100%; height:100%; object-fit:cover; object-position:center 30%; }
   .brand.pic .im.logo { background:#fff; }
+  .brand.pic .im.pens { background:url(img/pens.svg) center/cover,#d9d3c8; }
   .brand.pic .im.logo img { object-fit:contain; padding:24px 16px; }
   .brand.pic .txt { padding:16px 20px 20px; display:flex; flex-direction:column; }
   .brand.pic span { color:var(--muted); opacity:1; }
@@ -86,7 +94,7 @@
   .hobby { grid-template-columns:1fr repeat(4,1fr); margin:14px 0; align-items:stretch; }
   .hobby .intro { padding:18px 8px 0 0; }
   .hobby .intro .btn { color:var(--ink); border-color:var(--ink); margin-top:18px; }
-  .tile { min-height:300px; border-radius:6px; display:flex; align-items:flex-end; padding:16px; color:#fff; font-weight:700; line-height:1.25;
+  .tile { min-height:320px; border-radius:10px; display:flex; align-items:flex-end; padding:16px; color:#fff; font-weight:700; line-height:1.25;
     background:linear-gradient(transparent 55%,rgba(0,0,0,.6)), var(--img,none) var(--pos,center)/cover, var(--fb); }
 
   /* Контакты */
@@ -128,10 +136,11 @@
       <div class="stats">
         <div><strong>14</strong>лет опыта<br>в бизнесе</div>
         <div><strong>FMCG</strong>фундамент<br>карьеры</div>
-        <div><strong>E-Commerce</strong>продажи, команды,<br>результаты</div>
+        <div><strong>E-Commerce</strong>масштабирование<br>в онлайне</div>
+        <div><strong>1,2 → 4,5 млн ₽</strong>рост месячных продаж<br>бренда Farmavita</div>
       </div>
       <div class="btns">
-        <a class="btn main" href="#contacts">Связаться со мной</a>
+        <a class="btn main" href="#contacts">Связаться со мной →</a>
         <a class="btn" href="#fmcg">Мой опыт ↓</a>
       </div>
     </div>
@@ -142,9 +151,9 @@
 
 <section class="facts" id="about">
   <div class="wrap">
-    <div><b>ШАКИРОВ ДАМИР МАРАТОВИЧ</b><span>+7 (987) 422-64-23 · damir.shakirov.1988@mail.ru</span></div>
-    <div><b>Казань</b><span>Готов к командировкам</span></div>
-    <div><b>38 лет</b><span>родился 13 января 1988 г.</span></div>
+    <div class="f"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg><p><b>ШАКИРОВ ДАМИР МАРАТОВИЧ</b><span>+7 (987) 422-64-23 · damir.shakirov.1988@mail.ru</span></p></div>
+    <div class="f"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><p><b>Казань</b><span>Готов к командировкам</span></p></div>
+    <div class="f"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><p><b>38 лет</b><span>родился 13 января 1988 г.</span></p></div>
   </div>
 </section>
 
@@ -155,6 +164,7 @@
       <p class="n">01</p>
       <h2>FMCG</h2>
       <h3>Фундамент карьеры</h3>
+      <div class="co" role="img" aria-label="Nefis Cosmetics"><i>N</i><b>NEFIS</b><em>cosmetics</em></div>
       <p class="years">2012 — 2019 · 7 лет</p>
       <p class="role">Региональный менеджер по дистрибуции</p>
       <p class="role" style="margin-top:8px">Заместитель директора по работе с традиционной торговлей</p>
@@ -179,14 +189,14 @@
       <h2>E-Commerce</h2>
       <h3>Масштабирование бизнеса в онлайне · 2020 — сегодня</h3>
       <p>Создаю и развиваю E-Commerce направления с нуля: от логистики и фулфилмента до продвижения, сквозной аналитики, UNIT-экономики и PnL. Управляю брендами на Wildberries и Ozon, строю процессы и команды.</p>
+      <p style="margin-top:12px"><b>TOP 5% Ozon:</b> 17-е место в категории «Кофе в дрип-пакетах»</p>
     </article>
   </div>
 
   <div class="grid mid">
     <div class="card brand pic"><div class="im logo"><img src="img/farmavita.png" alt="Логотип Farmavita" loading="lazy"></div><div class="txt"><strong>1,2 → 4,5 млн ₽</strong><span>Farmavita: рост месячных продаж</span></div></div>
     <div class="card brand pic"><div class="im"><img src="img/feelflip.jpg" alt="Упаковка FEELFLIP" loading="lazy"></div><div class="txt"><strong>FEELFLIP</strong><span>Запуск бренда с нуля в марте 2026. Оборот 1,5 млн ₽ в августе 2026</span></div></div>
-    <div class="card brand b3"><strong class="big">TOP 5% Ozon</strong><span>17-е место в категории «Кофе в дрип-пакетах»</span></div>
-    <div class="card brand b4"><strong class="big">BIC</strong><span>5 кабинетов на Wildberries. Одновременное управление продажами и продвижением</span></div>
+    <div class="card brand pic"><div class="im pens" role="img" aria-label="Ручки BIC"></div><div class="txt"><strong>BIC</strong><span>5 кабинетов на Wildberries. Одновременное управление продажами и продвижением</span></div></div>
     <div class="card">
       <h2 style="font-size:1.3rem">Опыт работы</h2>
       <ul class="timeline">
@@ -205,10 +215,10 @@
       <h3 style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin:6px 0 12px">Больше, чем работа</h3>
       <p style="font-size:14px;color:var(--muted)">Энергия, движение, концентрация и командная работа — важная часть жизни за пределами бизнеса.</p>
     </div>
-    <div class="tile" style="--pos:45% center;--img:url(img/rowing.jpg);--fb:linear-gradient(160deg,#a02a2a,#e56a5a)">Гребля на лодке-дракон</div>
-    <div class="tile" style="--pos:55% center;--img:url(img/windsurf.jpg);--fb:linear-gradient(160deg,#1c6fa8,#f0c98a)">Виндсёрфинг</div>
-    <div class="tile" style="--pos:50% 35%;--img:url(img/snowboard.jpg);--fb:linear-gradient(160deg,#5b7fa8,#dfe8f3)">Сноуборд</div>
-    <div class="tile" style="--pos:20% center;--img:url(img/moto.jpg);--fb:linear-gradient(160deg,#3d4a3a,#c9784a)">Мотоспорт и путешествия</div>
+    <div class="tile" style="--pos:center;--img:url(img/rowing.jpg);--fb:linear-gradient(160deg,#a02a2a,#e56a5a)">Гребля на лодке-дракон</div>
+    <div class="tile" style="--pos:center;--img:url(img/windsurf.jpg);--fb:linear-gradient(160deg,#1c6fa8,#f0c98a)">Виндсёрфинг</div>
+    <div class="tile" style="--pos:center;--img:url(img/snowboard.jpg);--fb:linear-gradient(160deg,#5b7fa8,#dfe8f3)">Сноуборд</div>
+    <div class="tile" style="--pos:center;--img:url(img/moto.jpg);--fb:linear-gradient(160deg,#3d4a3a,#c9784a)">Мотоспорт и путешествия</div>
   </section>
 </main>
 
