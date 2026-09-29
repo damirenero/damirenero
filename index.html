@@ -3,134 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Дамир Шакиров — управление, продажи, E-commerce</title>
-<meta name="description" content="Дамир Шакиров: исполнительный директор, руководитель E-commerce направления. 14 лет опыта в FMCG и онлайн-продажах. Казань.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Caveat:wght@500&display=swap" rel="stylesheet">
-<style>
-  :root { --navy:#0d1830; --sand:#f0c98a; --paper:#f6f4ef; --card:#ebe8e1; --ink:#14213d; --muted:#5b6478; }
-  * { box-sizing:border-box; margin:0; }
-  html { scroll-behavior:smooth; }
-  body { background:var(--paper); color:var(--ink); font:16px/1.55 Manrope,system-ui,-apple-system,"Segoe UI",sans-serif; }
-  a { color:inherit; }
-  a:focus-visible,button:focus-visible { outline:3px solid var(--sand); outline-offset:3px; }
-  .wrap { max-width:1120px; margin:0 auto; padding:0 24px; }
-
-  /* 1. Главный блок */
-  .hero { position:relative; min-height:640px; color:#fff; overflow:hidden; background:linear-gradient(160deg,#0d1830 40%,#24345a); }
-  .hero .wrap { position:relative; z-index:1; }
-  .hero-photo { position:absolute; top:0; right:0; bottom:0; width:52%; background:url(img/photo.jpg) center 12%/cover no-repeat;
-    -webkit-mask-image:linear-gradient(to right,transparent,#000 40%); mask-image:linear-gradient(to right,transparent,#000 40%); }
-  nav { display:flex; gap:28px; align-items:center; padding:22px 0; font-size:14px; }
-  nav b { margin-right:auto; font-weight:800; }
-  nav a { text-decoration:none; opacity:.85; } nav a:hover { opacity:1; }
-  nav .city { font-size:13px; opacity:.8; }
-  .hero-body { padding:56px 0 64px; max-width:640px; }
-  .tag { color:var(--sand); letter-spacing:.14em; font-size:14px; text-transform:uppercase; }
-  h1 { font-size:clamp(3rem,9vw,5.6rem); line-height:1; font-weight:800; letter-spacing:-.03em; margin:18px 0 20px; }
-  .lead { font-size:18px; max-width:46ch; }
-  .stats { display:flex; flex-wrap:wrap; gap:0; margin:36px 0; }
-  .stats div { padding:0 22px; border-left:1px solid rgba(255,255,255,.3); font-size:13px; line-height:1.3; }
-  .stats div:first-child { padding-left:0; border:0; }
-  .stats strong { display:block; font-size:26px; font-weight:800; color:var(--sand); }
-  .btns { display:flex; flex-wrap:wrap; gap:14px; }
-  .btn { display:inline-block; padding:14px 24px; border-radius:8px; font-weight:700; font-size:15px; text-decoration:none; border:1.5px solid #fff; color:#fff; }
-  .btn.main { background:var(--sand); border-color:var(--sand); color:var(--navy); }
-  .btn:hover { transform:translateY(-2px); }
-  .btn { transition:transform .15s; }
-  .quote { z-index:1; text-shadow:0 1px 6px rgba(0,0,0,.6); position:absolute; right:32px; bottom:28px; max-width:230px; text-align:right; font-size:13px; opacity:.9; }
-  .script { z-index:1; position:absolute; right:48px; top:15%; font:500 2.4rem/1 Caveat,cursive; transform:rotate(-8deg); color:#fff; }
-
-  /* Полоса с данными */
-  .facts { background:#fff; border-bottom:1px solid #e4e1d8; }
-  .facts .wrap { display:flex; flex-wrap:wrap; gap:16px 48px; padding-top:18px; padding-bottom:18px; font-size:14px; }
-  .facts b { display:block; }
-  .facts .f { display:flex; gap:12px; align-items:center; }
-  .ico { width:26px; height:26px; flex:none; }
-  .facts span { color:var(--muted); }
-
-  /* Карточки */
-  .grid { display:grid; gap:14px; }
-  .top { grid-template-columns:1.05fr 1fr 1fr; margin-top:14px; }
-  .card { background:var(--card); border-radius:6px; padding:26px; position:relative; overflow:hidden; }
-  .card .n { font-size:13px; color:var(--muted); }
-  .card h2 { font-size:2.1rem; font-weight:800; letter-spacing:-.02em; line-height:1.1; margin:6px 0 4px; }
-  .card h3 { font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-bottom:14px; font-weight:700; }
-  .card ul { padding-left:18px; margin-top:10px; font-size:14px; }
-  .card p { font-size:14px; }
-  .years { color:var(--muted); font-size:14px; margin:14px 0 6px; }
-  .role { font-weight:800; }
-  .top .card { min-height:400px; }
-  .mountain { background:url(img/mountains.svg) center/cover no-repeat,#e6edf5; }
-  .china { background:url(img/skyline.svg) center bottom/100% auto no-repeat,linear-gradient(180deg,#fcefdc,#f4cd9f); }
-  .co { display:flex; align-items:flex-end; gap:10px; margin:2px 0 8px; color:#1b7a3a; }
-  .co i { font-style:normal; font-weight:800; font-size:1.5rem; line-height:1.25; padding:0 8px; border:2px solid #1b7a3a; border-radius:3px; align-self:center; }
-  .co b { font-size:1.7rem; font-weight:800; line-height:1; }
-  .co em { font-style:normal; font-weight:500; font-size:1.05rem; line-height:1.1; }
-  .cities { font-size:14px; margin-top:8px; }
-
-  .mid { grid-template-columns:repeat(3,1fr) 1.15fr; margin-top:14px; }
-  .brand { min-height:260px; display:flex; flex-direction:column; justify-content:flex-end; color:#fff; }
-  .brand strong { font-size:1.5rem; font-weight:800; line-height:1.1; }
-  .brand span { font-size:13px; opacity:.92; margin-top:8px; }
-  .brand.pic { background:#fff; color:var(--ink); padding:0; justify-content:flex-start; }
-  .brand.pic .im { height:190px; background:#e9e9e9; }
-  .brand.pic .im img { display:block; width:100%; height:100%; object-fit:cover; object-position:center 30%; }
-  .brand.pic .im.logo { background:#fff; }
-  .brand.pic .im.pens { background:url(img/pens.svg) center/cover,#d9d3c8; }
-  .brand.pic .im.logo img { object-fit:contain; padding:24px 16px; }
-  .brand.pic .txt { padding:16px 20px 20px; display:flex; flex-direction:column; }
-  .brand.pic span { color:var(--muted); opacity:1; }
-  .b3 { background:linear-gradient(160deg,#0f5d8a,#2fb0c8); }
-  .b4 { background:linear-gradient(160deg,#2a2a2e,#6b6b73); }
-  .big { font-size:1.9rem; }
-  .timeline { list-style:none; padding:0!important; margin:8px 0 0!important; }
-  .timeline li { padding:0 0 16px 22px; border-left:2px solid #c9c4b8; position:relative; font-size:14px; }
-  .timeline li::before { content:""; position:absolute; left:-6px; top:4px; width:10px; height:10px; border-radius:50%; background:var(--sand); border:2px solid var(--ink); }
-  .timeline em { display:block; font-style:normal; color:var(--muted); font-size:13px; }
-
-  /* Увлечения */
-  .hobby { grid-template-columns:1fr repeat(4,1fr); margin:14px 0; align-items:stretch; }
-  .hobby .intro { padding:18px 8px 0 0; }
-  .hobby .intro .btn { color:var(--ink); border-color:var(--ink); margin-top:18px; }
-  .tile { min-height:320px; border-radius:10px; display:flex; align-items:flex-end; padding:16px; color:#fff; font-weight:700; line-height:1.25;
-    background:linear-gradient(transparent 55%,rgba(0,0,0,.6)), var(--img,none) var(--pos,center)/cover, var(--fb); }
-
-  /* Контакты */
-  .contacts { background:var(--navy); color:#fff; margin-top:40px; padding:56px 0; }
-  .contacts h2 { font-size:2rem; font-weight:800; margin-bottom:10px; }
-  .contacts p { opacity:.8; margin-bottom:24px; }
-  footer { background:var(--navy); color:#8f9ab3; font-size:13px; padding:0 0 32px; }
-
-  @media (max-width:900px) {
-    .top,.mid,.hobby { grid-template-columns:1fr 1fr; }
-    .hobby .intro { grid-column:1/-1; }
-    nav a { display:none; }
-    .script,.quote { display:none; }
-    .hero-photo { width:100%; opacity:.4; -webkit-mask-image:none; mask-image:none; }
-  }
-  @media (max-width:560px) {
-    .top,.mid,.hobby { grid-template-columns:1fr; }
-    .stats div { padding:0 14px; }
-  }
-  @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .btn { transition:none; } }
-</style>
+<title>Дамир Шакиров — управление, продажи, E-commerce</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 
 <!-- БЛОК 1: стартовая карточка. Ваше фото: img/photo.jpg -->
 <header class="hero">
   <div class="hero-photo" role="img" aria-label="Дамир Шакиров"></div>
   <div class="wrap">
-    <nav>
-      <b>Дамир Шакиров</b>
-      <a href="#about">Обо мне</a><a href="#fmcg">Опыт</a><a href="#china">Китай</a>
-      <a href="#ecom">E-</a><a href="#hobby">Увлечения</a><a href="#contacts">Контакты</a>
-      <span class="city">Казань · готов к командировкам</span>
-    </nav>
+    <nav><b><a href="index.html">Дамир Шакиров</a></b><a href="index.html" aria-current="page">Главная</a><a href="fmcg.html">FMCG</a><a href="china.html">Китай</a><a href="ecommerce.html">E-Commerce</a><a href="hobbies.html">Увлечения</a><a href="index.html#contacts">Контакты</a><span class="city">Казань · готов к командировкам</span></nav>
     <div class="hero-body">
-      <p class="tag">Управление — Продажи — E-Commerce</p>
+      <p class="tag">Управление — Продажи — T-Commerce</p>
       <h1>Дамир Шакиров</h1>
       <p class="lead">Исполнительный директор / директор по развитию бизнеса / Руководитель E-commerce направления</p>
       <div class="stats">
@@ -141,7 +29,7 @@
       </div>
       <div class="btns">
         <a class="btn main" href="#contacts">Связаться со мной →</a>
-        <a class="btn" href="#fmcg">Мой опыт ↓</a>
+        <a class="btn" href="fmcg.html">Мой опыт ↓</a>
       </div>
     </div>
   </div>
@@ -157,70 +45,12 @@
   </div>
 </section>
 
-<main class="wrap">
-  <div class="grid top">
-    <!-- БЛОК 2 -->
-    <article class="card mountain" id="fmcg">
-      <p class="n">01</p>
-      <h2>FMCG</h2>
-      <h3>Фундамент карьеры</h3>
-      <div class="co" role="img" aria-label="Nefis Cosmetics"><i>N</i><b>NEFIS</b><em>cosmetics</em></div>
-      <p class="years">2012 — 2019 · 7 лет</p>
-      <p class="role">Региональный менеджер по дистрибуции</p>
-      <p class="role" style="margin-top:8px">Заместитель директора по работе с традиционной торговлей</p>
-      <ul>
-        <li>30 человек в региональной команде</li>
-        <li>6 дистрибьюторов в зоне ответственности</li>
-        <li>Регионы: Дальний Восток и Западная Сибирь</li>
-      </ul>
-    </article>
-    <!-- БЛОК 3 -->
-    <article class="card china" id="china">
-      <p class="n">02</p>
-      <h2>Китай</h2>
-      <h3>Новый опыт. Новая культура</h3>
-      <p><b>2019 — жил и работал в Китае</b></p>
-      <p style="margin-top:12px">Преподавал английский язык детям от 3 до 9 лет</p>
-      <p class="cities" style="margin-top:14px">Посетил города:<br>Шанхай, Пекин, Гуанчжоу, Уси, Нинбо, Циндао</p>
-    </article>
-    <!-- БЛОК 4 -->
-    <article class="card" id="ecom">
-      <p class="n">03</p>
-      <h2>E-Commerce</h2>
-      <h3>Масштабирование бизнеса в онлайне · 2020 — сегодня</h3>
-      <p>Создаю и развиваю E-Commerce направления с нуля: от логистики и фулфилмента до продвижения, сквозной аналитики, UNIT-экономики и PnL. Управляю брендами на Wildberries и Ozon, строю процессы и команды.</p>
-      <p style="margin-top:12px"><b>TOP 5% Ozon:</b> 17-е место в категории «Кофе в дрип-пакетах»</p>
-    </article>
-  </div>
-
-  <div class="grid mid">
-    <div class="card brand pic"><div class="im logo"><img src="img/farmavita.png" alt="Логотип Farmavita" loading="lazy"></div><div class="txt"><strong>1,2 → 4,5 млн ₽</strong><span>Farmavita: рост месячных продаж</span></div></div>
-    <div class="card brand pic"><div class="im"><img src="img/feelflip.jpg" alt="Упаковка FEELFLIP" loading="lazy"></div><div class="txt"><strong>FEELFLIP</strong><span>Запуск бренда с нуля в марте 2026. Оборот 1,5 млн ₽ в августе 2026</span></div></div>
-    <div class="card brand pic"><div class="im pens" role="img" aria-label="Ручки BIC"></div><div class="txt"><strong>BIC</strong><span>5 кабинетов на Wildberries. Одновременное управление продажами и продвижением</span></div></div>
-    <div class="card">
-      <h2 style="font-size:1.3rem">Опыт работы</h2>
-      <ul class="timeline">
-        <li><em>2025 – 2026</em>ООО «Е-КОМ ТРЕЙД»<br>Руководитель проектов</li>
-        <li><em>2021 – 2025</em>ООО «Все просто»<br>Исполнительный директор</li>
-        <li><em>2020 – 2021</em>ООО «Е-КОМ ТРЕЙД»<br>Заместитель директора по продажам</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Увлечения. Фото лежат в папке img -->
-  <section class="grid hobby" id="hobby">
-    <div class="intro">
-      <p class="n" style="color:var(--muted);font-size:13px">04</p>
-      <h2 style="font-size:2.1rem;font-weight:800">Увлечения</h2>
-      <h3 style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin:6px 0 12px">Больше, чем работа</h3>
-      <p style="font-size:14px;color:var(--muted)">Энергия, движение, концентрация и командная работа — важная часть жизни за пределами бизнеса.</p>
-    </div>
-    <div class="tile" style="--pos:center;--img:url(img/rowing.jpg);--fb:linear-gradient(160deg,#a02a2a,#e56a5a)">Гребля на лодке-дракон</div>
-    <div class="tile" style="--pos:center;--img:url(img/windsurf.jpg);--fb:linear-gradient(160deg,#1c6fa8,#f0c98a)">Виндсёрфинг</div>
-    <div class="tile" style="--pos:center;--img:url(img/snowboard.jpg);--fb:linear-gradient(160deg,#5b7fa8,#dfe8f3)">Сноуборд</div>
-    <div class="tile" style="--pos:center;--img:url(img/moto.jpg);--fb:linear-gradient(160deg,#3d4a3a,#c9784a)">Мотоспорт и путешествия</div>
-  </section>
-</main>
+<main class="wrap"><div class="grid hub">
+<a class="card hub-card mountain" href="fmcg.html"><p class="n">01</p><h2>FMCG</h2><h3>Фундамент карьеры</h3><div class="co" role="img" aria-label="Nefis Cosmetics"><i>N</i><b>NEFIS</b><em>cosmetics</em></div><p>2012 — 2019 · 7 лет. Команда из 30 человек, 6 дистрибьюторов, Дальний Восток и Западная Сибирь.</p><span class="more">Подробнее →</span></a>
+<a class="card hub-card china" href="china.html"><p class="n">02</p><h2>Китай</h2><h3>Новый опыт. Новая культура</h3><p>2019 год: жил и работал в Китае, преподавал английский детям, побывал в шести городах.</p><span class="more">Подробнее →</span></a>
+<a class="card hub-card" href="ecommerce.html"><p class="n">03</p><h2>E-Commerce</h2><h3>Масштабирование бизнеса в онлайне · 2020 — сегодня</h3><p class="bignum">1,2 → 4,5 млн ₽</p><p>Рост месячных продаж Farmavita. Бренды на Wildberries и Ozon, запуск FEELFLIP с нуля.</p><span class="more">Подробнее →</span></a>
+<a class="card hub-card hobby-card" href="hobbies.html" style="--img:url(img/windsurf.jpg)"><p class="n">04</p><h2>Увлечения</h2><h3>Больше, чем работа</h3><p>Лодка-дракон, виндсёрфинг, сноуборд, мотоспорт и путешествия.</p><span class="more">Подробнее →</span></a>
+</div></main>
 
 <section class="contacts" id="contacts">
   <div class="wrap">
@@ -233,6 +63,7 @@
   </div>
 </section>
 <footer><div class="wrap">© 2026 Дамир Шакиров</div></footer>
+
 
 </body>
 </html>
